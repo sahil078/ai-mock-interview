@@ -1,6 +1,6 @@
 import { SignIn } from '@clerk/nextjs'
 
-const  signIn = () => {
+const  SignInPage = () => {
     return (
         <section class="bg-white dark:bg-gray-900">
             <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -70,11 +70,11 @@ const  signIn = () => {
                                 quibusdam aperiam voluptatum.
                             </p>
                         </div>
-                        <SignIn />
+                        <SignIn  routing="hash"/>
                     </div>
                 </main>
             </div>
         </section>
     )
 }
-export default signIn
+export default SignInPage

@@ -1,9 +1,8 @@
-"use client"
-// app/page.js
+"use client";
 import { useEffect, useState } from 'react';
 import { useUser } from '@clerk/nextjs';
-import signUp from "./(auth)/sign-up/[[...sign-up]]/page"; // Correct default import
-import signIn from "./(auth)/sign-in/[[...sign-in]]/page"; // Correct default import
+import SignUp from './(auth)/sign-up/[[...sign-up]]/page'; // Correct default import
+import SignIn from './(auth)/sign-in/[[...sign-in]]/page'; // Correct default import
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -21,7 +20,7 @@ export default function Home() {
   return (
     <div className='min-h-full w-auto flex items-center justify-center'>
       {redirecting ? (
-        <div className='flex flex-col items-center justify-center gap-10 p-10 my-5 border rounded-lg shadow-md bg-gray-200' >
+        <div className='flex flex-col items-center justify-center gap-10 p-10 my-5 border rounded-lg shadow-md bg-gray-200'>
           <p>You are signed in! Redirecting...</p>
           {/* Link to dashboard */}
           <Link href="/dashboard">
@@ -30,7 +29,9 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <signUp /> {/* Or <SignIn /> based on your logic */}
+          <div className='flex flex-col items-center justify-center gap-10'>
+            <SignIn /> {/* Show SignIn if user is not signed in */}
+          </div>
         </>
       )}
     </div>

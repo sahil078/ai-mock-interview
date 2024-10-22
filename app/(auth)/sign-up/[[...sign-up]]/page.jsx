@@ -1,6 +1,6 @@
 import { SignUp } from '@clerk/nextjs'
 
-const signUp = ()=> {
+const SignUpPage = ()=> {
   return(
     <section class="bg-white dark:bg-gray-900">
             <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -70,7 +70,7 @@ const signUp = ()=> {
                                 quibusdam aperiam voluptatum.
                             </p>
                         </div>
-                        <SignUp />
+                        <SignUp routing="hash" />
                     </div>
                 </main>
             </div>
@@ -78,4 +78,4 @@ const signUp = ()=> {
   );
 }
 
-export default signUp
+export default SignUpPage
