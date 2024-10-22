@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+button svg{
+    display: none;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: 220, 13%, 18%;  /* Dark background color */
+    --foreground: 0, 0%, 100%;    /* White text color */
+    --primary: 230, 80%, 50%;     /* blue-600 as HSL */
+    --primary-foreground: 220, 13%, 40%; /* Slightly lighter blue for text */
+    --radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom styles for ShadCN Buttons using HSL variables */
+
+.btn {
+    @apply bg-blue-600 text-white font-semibold px-4 py-2 rounded-md transition-colors;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.btn:hover {
+    @apply bg-blue-700 text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btn-outline {
+    @apply border border-gray-600 text-black px-4 py-2 rounded-md font-semibold transition-colors;
+}
+
+.btn-outline:hover {
+    @apply bg-blue-700 text-white;
+}
+
+.btn-ghost {
+    @apply text-blue-600 bg-transparent px-4 py-2 transition-colors;
+}
+
+.btn-ghost:hover {
+    @apply bg-blue-100 text-blue-600;
+}
+
+/* Adding border-radius using your custom border-radius variables */
+.btn {
+    border-radius: var(--radius);
+}
+
+/* If you want specific buttons to have different border-radius sizes */
+.btn-lg {
+    border-radius: var(--radius-lg);
+}
+
+.btn-md {
+    border-radius: calc(var(--radius) - 2px);
+}
+
+.btn-sm {
+    border-radius: calc(var(--radius) - 4px);
 }

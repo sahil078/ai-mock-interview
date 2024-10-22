@@ -1,36 +1,48 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# Build output
+.next/
+out/
+dist/
+build/
 
-# testing
-/coverage
+# Local env files
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
 
-# next.js
-/.next/
-/out/
+# Log files
+logs/
+*.log
 
-# production
-/build
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# misc
+# Misc
 .DS_Store
-*.pem
+Thumbs.db
+*.tgz
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Coverage directory used by tools like istanbul
+coverage/
 
-# local env files
-.env*.local
+# Next.js static exports
+export/
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Temporary files
+tmp/
+temp/
