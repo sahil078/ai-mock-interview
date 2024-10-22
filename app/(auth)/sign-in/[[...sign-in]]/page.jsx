@@ -1,6 +1,6 @@
 import { SignIn } from '@clerk/nextjs'
 
-export default function Page() {
+const  signIn = () => {
     return (
         <section class="bg-white dark:bg-gray-900">
             <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -77,3 +77,4 @@ export default function Page() {
         </section>
     )
 }
+export default signIn
